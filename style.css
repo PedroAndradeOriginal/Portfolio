@@ -1,5 +1,4 @@
 /*Resetar o CSS daqui*/
-
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, and, address, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video, input, textarea, select {
 	background:transparent;
 	border:0;
@@ -51,12 +50,17 @@ table {
 	border-collapse:collapse;
 	border-spacing:0;
 }
-
 /*Até aqui :)*/
 
 
 
 
+
+
+
+
+
+/*Barra de navegação*/
 a{
     color: #fff;
     text-decoration: none;
@@ -74,16 +78,15 @@ a:hover {
 }
 
 nav {
+  position: fixed;
+  top: 0%;
+  width: 100%;
   display: flex;
   justify-content: space-around;
   align-items: center;
   font-family: 'Fira Sans', sans-serif;
   background: #121214;
   height: 8vh;
-}
-
-main {
-  background-image: url("imagens/bg\ mobile.jpg");
 }
 
 .lista-nav {
@@ -108,124 +111,16 @@ main {
     margin: 8px;
 }
 
-@media (max-width: 850px) {
-    body {
-      overflow-x: hidden;
-    }
-    .lista-nav {
-      position: fixed;
-      top: 8vh;
-      right: 0;
-      width: 50vw;
-      height: 92vh;
-      background: #121214;
-      flex-direction: column;
-      align-items: center;
-      justify-content: space-around;
-      transform: translateX(100%);
-      transition: transform 0.3s ease-in;
-    }
-    .lista-nav li {
-      margin-left: 0;
-      opacity: 0;
-    }
-    .menu-mobile {
-      display: block;
-    }
-  
-  .lista-nav.active {
-    transform: translateX(0);
-  }
-  
-  @keyframes navLinkFade {
-    from {
-      opacity: 0;
-      transform: translateX(50px);
-    }
-    to {
-      opacity: 1;
-      transform: translateX(0);
-    }
-  }
 
-  main{
-    background-color: #633aad;
-  }
 
-  section.apresentacao {
-    padding-bottom: 30px;
-    align-items: center;
-    height: 30rem;
-    color: #fff;
-  }
 
-  .apresentacao .conteudoapresentacao{
-    padding-top: 50px;
-    display: block;
-    text-align: center;
-    align-items: center;
-  }
-
-  .conteudoapresentacao .titulos {
-    padding: 0px;
-    padding-bottom: 2rem;
-  }
-
-  .redessociais {
-    display: flex;
-    width: 8vw;
-  }
-
-  .conteudoapresentacao .img-apresentacao img{
-    width: 15rem;
-    border-radius: 100%;
-  }
-  .conteudoapresentacao h2 {
-    font-size: 1rem;
-    padding-bottom: 1rem;
-  }
-
-  .conteudoapresentacao h1 {
-    font-size: 2rem;
-    padding-bottom: 1rem;
-  }
-
-  div.tituloCorpo {
-    justify-items: center;
-    text-align: center;
-  }
-
-  div.tituloCorpo h1{
-    font-size: 2rem;
-    margin-left: 0;
-  }
-
-  div.textoCorpo p{
-    font-size: 14pt;
-    text-align: center;
-  }
-
-  div.textoCorpo p.left{
-    font-size: 12pt;
-    text-align: left;
-  }
-
-  .galeria li{
-    width: 8vw;
-  }
-
-  #projetos .row {
-    margin-top: 30px;
-    display: block;
-  }
-
-  #projetos .row .card{
-    width: 70vw;
-  }
-
+/*Corpo do site*/
+main {
+  background-image: url("imagens/bg.jpg");
 }
 
 .apresentacao {
+  padding-top: 70px;
   display: flex;
   height: 43vw;
   color: #fff;
@@ -256,23 +151,23 @@ h2{
 }
 
 .titulos{
-  padding-right: 3rem;
+  padding-right: 5rem;
 }
 
 #quemsou {
+  padding-top: 40px;
   background-color: #121214;
 }
 
 .tituloCorpo h1{
+  padding-bottom: 30px;
   margin-left: 15vw;
-  padding-top: 30px;
   color: #fff;
   font-family: 'Fira Sans', sans-serif;
   font-size: 3rem;
 }
 
 .linhaTitulo{
-  margin-top: 15px;
   background-color: #633aad;
   width: 20vw;
   height: 10px;
@@ -289,6 +184,7 @@ h2{
 }
 
 #conhecimentos{
+  padding-top: 40px;
   background-color: #121214;
   margin-top: 8rem;
 }
@@ -317,6 +213,7 @@ h2{
 }
 
 #projetos{
+  padding-top: 40px;
   background-color: #121214;
   margin-top: 8rem;
 }
@@ -367,6 +264,7 @@ h2{
 }
 
 #contatos{
+  padding-top: 40px;
   background-color: #121214;
   margin-top: 8rem;
 }
@@ -378,9 +276,128 @@ footer{
 
 footer p{
   padding: 10px 10px 10px 10px;
-  background-color: #633aad;
+  background-color: #623aad;
   color: #fff;
   font-family: 'Fira Sans', sans-serif;
   font-size: 11pt;
   text-align: center;
+}
+
+/* Daqui pra baixo o responsivo*/
+
+@media (max-width: 850px) {
+  body {
+    overflow-x: hidden;
+  }
+  .lista-nav {
+    position: fixed;
+    top: 8vh;
+    right: 0;
+    width: 50vw;
+    height: 92vh;
+    background: #121214;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in;
+  }
+  .lista-nav li {
+    margin-left: 0;
+    opacity: 0;
+  }
+  .menu-mobile {
+    display: block;
+  }
+
+.lista-nav.active {
+  transform: translateX(0);
+}
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+main{
+  background-color: #633aad;
+}
+
+section.apresentacao {
+  padding-bottom: 80px;
+  align-items: center;
+  height: 30rem;
+  color: #fff;
+}
+
+.apresentacao .conteudoapresentacao{
+  padding-top: 50px;
+  display: block;
+  text-align: center;
+  align-items: center;
+}
+
+.conteudoapresentacao .titulos {
+  padding: 0px;
+  padding-bottom: 2rem;
+}
+
+.redessociais {
+  display: flex;
+  width: 8vw;
+}
+
+.conteudoapresentacao .img-apresentacao img{
+  width: 15rem;
+  border-radius: 100%;
+}
+.conteudoapresentacao h2 {
+  font-size: 1rem;
+  padding-bottom: 1rem;
+}
+
+.conteudoapresentacao h1 {
+  font-size: 2rem;
+  padding-bottom: 1rem;
+}
+
+div.tituloCorpo {
+  justify-items: center;
+  text-align: center;
+}
+
+div.tituloCorpo h1{
+  font-size: 2rem;
+  margin-left: 0;
+}
+
+div.textoCorpo p{
+  font-size: 14pt;
+  text-align: center;
+}
+
+div.textoCorpo p.left{
+  font-size: 12pt;
+  text-align: left;
+}
+
+.galeria li{
+  width: 8vw;
+}
+
+#projetos .row {
+  margin-top: 30px;
+  display: block;
+}
+
+#projetos .row .card{
+  width: 70vw;
+}
+
 }
