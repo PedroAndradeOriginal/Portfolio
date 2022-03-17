@@ -289,6 +289,7 @@ footer p{
 @media (max-width: 850px) {
 	
 main {
+  background-color: #5D478B;		
   background-image: url("imagens/bg.jpg");
 }
 	
