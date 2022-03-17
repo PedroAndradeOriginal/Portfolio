@@ -113,6 +113,7 @@ nav {
 
 /*Corpo do site*/
 main {
+  background-color: #5D478B;	
   background-image: url("imagens/bg.jpg");
 }
 
@@ -233,7 +234,6 @@ h2{
 }
 
 .card:hover {
-  transform: translateY(-5px);
   cursor: pointer;
 }
  
